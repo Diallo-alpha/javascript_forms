@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation de formulaire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="processor.html" method="get" id="frmStudentRegistration" name="frmStudentRegistration" onsubmit="return validate()" onreset="resetForm()">
+        <label for="txtStudentName">Nom d'étudiant</label> <br>
+        <input type="text" placeholder="Entrez votre nom" id="txtStudentName" name="txtStudentName">
+        <span id="spnIsStudentNameValid"></span> <br> <br>
+        
+        <label for="pwdStudent">Mot de passe</label><br>
+        <input type="password" name="pwdStudent" id="pwdStudent" placeholder="Entrez votre mot de passe">
+        <span id="spnIsStudentPasswordValid"></span> <br> <br>
+        
+        <label for="cpwdStudent">Confirmez le mot de passe</label> <br>
+        <input type="password" name="cpwdStudent" id="cpwdStudent" placeholder="Confirmez votre mot de passe">
+        <span id="spnIsStudentCPasswordValid"></span> <br> <br>
+        
+        <label for="rdbStudentGender">Genre :</label> <br>
+        <input type="radio" name="rdStudentGender" id="rdbMale" value="male">
+        <label for="rdbMale">Masculin</label>
+        <input type="radio" name="rdStudentGender" id="rdbFemale" value="female">
+        <label for="rdbFemale">Féminin</label>
+        <span id="spnIsStudentGenderValid"></span> <br> <br>
+        
+        <input type="submit" value="SOUMETTRE">
+        <input type="reset" value="RÉINITIALISER">
+    </form>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
